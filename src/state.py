@@ -46,12 +46,14 @@ def file_reducer(left, right):
 
 
 class DeepAgentState(AgentState):
-    """Extended agent state that includes task tracking and virtual file system.
+    """Extended agent state that includes task tracking, virtual file system, and diff tracking.
 
     Inherits from LangGraph's AgentState and adds:
     - todos: List of Todo items for task planning and progress tracking
     - files: Virtual file system stored as dict mapping filenames to content
+    - diffs: Scratch pad for tracking file diffs/changes as dict mapping filenames to diff content
     """
 
     todos: NotRequired[list[Todo]]
     files: Annotated[NotRequired[dict[str, str]], file_reducer]
+    diffs: Annotated[NotRequired[dict[str, str]], file_reducer]

@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-from IPython.display import Image, display
+# from IPython.display import Image, display
 from src.llms import get_model
 from langchain.agents import create_agent
 from src.tools.todo_tools import *
