@@ -18,7 +18,7 @@ warnings.filterwarnings(
 )
 
 
-model = get_model("reliable")
+model = get_model("smart")
 
 # Configure tools for TSX Styling agent
 tools = [
